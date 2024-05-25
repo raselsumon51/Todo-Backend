@@ -9,7 +9,7 @@ app.use(cors());
 mongoose.set('strictQuery', true);
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/todo", {
+mongoose.connect("mongodb+srv://raselsumon51:enPAmPa3oRxTsOCW@cluster0.nngte0p.mongodb.net/todo?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
