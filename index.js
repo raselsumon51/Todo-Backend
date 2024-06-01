@@ -22,8 +22,13 @@ const Todo = require("./models/Todo");
 
 app.get("/todos", async (req, res) => {
     const todos = await Todo.find();
-    // console.log(todos);
-    res.json(todos);
+    if (todos.length===0) {
+        res.status(404).json('todos are empty');
+    } else {
+        res.json(todos);
+    }
+     //console.log(todos);
+   
 });
 
 app.post("/todo/new", async (req, res) => {
